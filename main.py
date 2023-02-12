@@ -19,11 +19,9 @@ class Coche(Vehiculo):
     Velocidad = None
     Cilindrada = None
     def __init__(self,color,ruedas,puertas,velocidad,cilindrada):
-        Coche.Color = color
-        Coche.Ruedas = ruedas
-        Coche.Puertas = puertas
-        Coche.Velocidad = velocidad
-        Coche.Cilindrada = cilindrada
+        Vehiculo().__init__(color,ruedas,puertas)
+        self.Velocidad = velocidad
+        self.Cilindrada = cilindrada
     def mostrar(self):
         print("El color de coche es ",Coche.Color," la cantidad de ruedas que tiene es ", Coche.Ruedas," la cantidad de puertas que tiene es ",Coche.Ruedas, " la Velocidad es ",Coche.Velocidad," las cilindrada es ",Coche.Cilindrada)
         
