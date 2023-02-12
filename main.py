@@ -7,23 +7,18 @@
     
 determina_anio(int(input("ingrese cantidad de dias que tiene el año:")))"""
 class Vehiculo:
-    Color = None
-    Ruedas = None
-    Puertas = None
     def __init__(self,color,ruedas,puertas):
         self.Color = color
         self.Ruedas = ruedas
         self.Puertas = puertas
         
 class Coche(Vehiculo):
-    Velocidad = None
-    Cilindrada = None
     def __init__(self,color,ruedas,puertas,velocidad,cilindrada):
-        Vehiculo().__init__(color,ruedas,puertas)
+        super().__init__(color,ruedas,puertas)
         self.Velocidad = velocidad
         self.Cilindrada = cilindrada
     def mostrar(self):
-        print("El color de coche es ",Coche.Color," la cantidad de ruedas que tiene es ", Coche.Ruedas," la cantidad de puertas que tiene es ",Coche.Ruedas, " la Velocidad es ",Coche.Velocidad," las cilindrada es ",Coche.Cilindrada)
+        print("El color de coche es ",self.Color," la cantidad de ruedas que tiene es ", self.Ruedas," la cantidad de puertas que tiene es ",self.Ruedas, " la Velocidad es ",self.Velocidad," las cilindrada es ",self.Cilindrada)
         
 
         
